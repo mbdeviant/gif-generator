@@ -2,14 +2,19 @@ import { SECRET_KEY } from "./codes-needed-to-take-over-the-world.js";
 
 const searchBar = document.getElementById("searchbar");
 const searchButton = document.getElementById("search-button");
+const button = document.getElementById("refresh-button");
+const img = document.querySelector("img");
+
+window.onload = fetchData;
 
 searchButton.addEventListener("click", () => {
   const keyword = searchBar.value;
   fetchData(keyword);
 });
 
-const button = document.getElementById("refresh-button");
-const img = document.querySelector("img");
+button.addEventListener("click", () => {
+  fetchData();
+});
 
 function fetchData(keyword = "cats") {
   fetch(
@@ -24,7 +29,3 @@ function fetchData(keyword = "cats") {
       img.src = imgData;
     });
 }
-window.onload = fetchData;
-button.addEventListener("click", () => {
-  fetchData();
-});
