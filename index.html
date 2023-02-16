@@ -4,9 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="script.js" defer></script>
+    <script type="module" src="main.js" defer></script>
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Gif Generator</title>
   </head>
-  <body></body>
+  <body>
+    <div class="main-container">
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchbar"
+          name="searchbar"
+          placeholder="Search gifs"
+        />
+        <button type="submit" id="search-button">
+          <span class="ico ico-mglass"></span>
+        </button>
+      </div>
+      <img src="#" alt="img" />
+      <button id="refresh-button">Refresh</button>
+    </div>
+  </body>
 </html>
